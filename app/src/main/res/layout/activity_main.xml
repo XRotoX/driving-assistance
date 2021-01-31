@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5"
+    tools:context=".MainActivity"
+    android:layout_marginVertical="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.25"
+        android:paddingHorizontal="20dp"
+        android:orientation="vertical"
+        android:gravity="start|bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Driving"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:textColor="@color/toggle_text_off"
+            android:textAllCaps="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assistance"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:textColor="@color/toggle_text_off"
+            android:textAllCaps="true"/>
+
+    </LinearLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="3"
+         android:weightSum="2"
+         android:orientation="horizontal"
+         android:paddingHorizontal="20dp">
+         <LinearLayout
+             android:layout_weight="1"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:gravity="center">
+             <ToggleButton
+                 android:id="@+id/attentionTB"
+                 android:layout_width="150dp"
+                 android:layout_height="70dp"
+                 android:padding="15dp"
+                 android:textOff="Attention"
+                 android:textOn="Attention"
+                 android:textAlignment="viewStart"
+                 android:drawablePadding="15dp"
+                 android:drawableStart="@drawable/ic_baseline_airline_seat_recline_normal_24_white"
+                 android:checked="true"
+                 android:textColor="@color/toggle_text_on"
+                 android:background="@drawable/custom_toggle_button"
+                 android:layout_marginBottom="20dp">
+
+             </ToggleButton>
+             <ToggleButton
+                 android:id="@+id/speedTB"
+                 android:layout_width="150dp"
+                 android:layout_height="70dp"
+                 android:padding="15dp"
+                 android:textOff="Speed"
+                 android:textOn="Speed"
+                 android:textAlignment="viewStart"
+                 android:drawablePadding="15dp"
+                 android:drawableStart="@drawable/ic_baseline_speed_24_white"
+                 android:checked="true"
+                 android:textColor="@color/toggle_text_on"
+                 android:background="@drawable/custom_toggle_button"
+                 android:layout_marginBottom="20dp">
+
+             </ToggleButton>
+             <ToggleButton
+                 android:id="@+id/breakTB"
+                 android:layout_width="150dp"
+                 android:layout_height="70dp"
+                 android:padding="15dp"
+                 android:textOff="Break"
+                 android:textOn="Break"
+                 android:textAlignment="viewStart"
+                 android:drawablePadding="15dp"
+                 android:drawableStart="@drawable/ic_baseline_access_alarm_24_dark"
+                 android:checked="false"
+                 android:textColor="@color/toggle_text_off"
+                 android:background="@drawable/custom_toggle_button"
+                 android:layout_marginBottom="20dp">
+
+             </ToggleButton>
+
+         </LinearLayout>
+         <LinearLayout
+             android:layout_weight="1"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:gravity="center">
+             <ImageView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_marginHorizontal="20dp"
+                 android:src="@drawable/red_car"/>
+         </LinearLayout>
+     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".75"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/startJourney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="20dp"
+            app:backgroundTint="@color/toggle_text_off"
+            android:text="Start my journey"/>
+
+    </LinearLayout>
+
+</LinearLayout>
